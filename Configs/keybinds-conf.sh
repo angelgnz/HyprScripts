@@ -36,8 +36,12 @@ chmod +x "$HYPR_DIR/scripts/kvm-logi.sh"
 echo '
 
 # KVM Logitech
-bind = $mainMod, F2, exec,~/.config/hypr/scripts/kvm-logi.sh' | tee -a $HYPR_DIR/keybindings.conf
+bind = $mainMod, F2, exec,~/.config/hypr/scripts/kvm-logi.sh
 
+# Custom apps
+bind = $mainMod, F7, exec,cd /home/angel/VM; quickemu --vm windows-11.conf
+bind = $mainMod, F6, exec,cd /home/angel/VM; quickemu --vm ubuntu-22.04.conf
+bind = $mainMod, F5, exec,./Vemto/vemto-1.3.3.AppImage --no-sandbox' | tee -a $HYPR_DIR/keybindings.conf
 fi
 
 # Define the file path and the line to add

@@ -3,6 +3,10 @@
 HYPR_DIR=~/.config/hypr
 
 if grep -q "#Custom Rules" $HYPR_DIR/windowrules.conf; then
+
+    echo "Custom rules already exists"
+
+else
     echo '
 
 #Custom Rules
@@ -31,7 +35,4 @@ windowrulev2 = opacity 0.80 0.80,class:^(org.kde.dolphin)$
 windowrulev2 = opacity 0.80 0.80,class:^(org.kde.ark)$
 windowrulev2 = opacity 0.80 0.80,class:^(nwg-look)$
 windowrulev2 = opacity 0.80 0.80,class:^(qt5ct)$' | tee -a $HYPR_DIR/windowrules.conf
-
-else
-    echo "Custom rules already exists"
 fi
